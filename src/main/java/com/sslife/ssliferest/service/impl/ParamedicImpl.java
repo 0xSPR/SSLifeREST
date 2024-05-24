@@ -1,9 +1,9 @@
 package com.sslife.ssliferest.service.impl;
 
 import com.sslife.ssliferest.model.dao.ParamedicDao;
+import com.sslife.ssliferest.model.dto.ParamedicDto;
 import com.sslife.ssliferest.model.entity.Paramedic;
 import com.sslife.ssliferest.service.IParamedic;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +17,20 @@ public class ParamedicImpl implements IParamedic {
 
     @Transactional
     @Override
-    public Paramedic save(Paramedic paramedic) {
+    public Paramedic save(ParamedicDto paramedicDto) {
+        Paramedic paramedic = Paramedic.builder()
+                .paramedicId(paramedicDto.getParamedicId())
+                .experience(paramedicDto.getExperience())
+                .phone(paramedicDto.getPhone())
+                .firstName(paramedicDto.getFirstName())
+                .gender(paramedicDto.getGender())
+                .identificationNumber(paramedicDto.getIdentificationNumber())
+                .specialty(paramedicDto.getSpecialty())
+                .employmentStatus(paramedicDto.getEmploymentStatus())
+                .email(paramedicDto.getEmail())
+                .dateOfBirth(paramedicDto.getDateOfBirth())
+                //.state(paramedicDto.getState())
+                .build();
         return paramedicDao.save(paramedic);
     }
 
