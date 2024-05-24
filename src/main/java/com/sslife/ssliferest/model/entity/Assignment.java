@@ -22,13 +22,13 @@ public class Assignment implements Serializable {
 
     @Id
     @Column(name = "assignmentId")
-    private int assignmentId;
+    private Integer assignmentId;
 
     @Column(name = "emergencyId")
-    private int emergencyId;
+    private Integer emergencyId;
 
     @Column(name = "ambulanceId")
-    private int ambulanceId;
+    private Integer ambulanceId;
 
     @Column(name = "dateTimeAssigned")
     private Date dateTimeAssigned;

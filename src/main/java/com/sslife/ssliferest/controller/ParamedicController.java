@@ -1,6 +1,5 @@
 package com.sslife.ssliferest.controller;
 
-import ch.qos.logback.core.net.server.Client;
 import com.sslife.ssliferest.model.entity.Paramedic;
 import com.sslife.ssliferest.service.IParamedic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class ParamedicController {
         paramedicService.delete(paramedicDelete);
     }
 
-    @GetMapping("paramedic/1")
+    @GetMapping("paramedic/{id}")
     public Paramedic showById(@PathVariable Integer id) {
         return paramedicService.findById(id);
     }

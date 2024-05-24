@@ -24,8 +24,8 @@ public class ParamedicImpl implements IParamedic {
     @Transactional(readOnly = true)
     @Override
     public Paramedic findById(Integer id) {
-         return paramedicDao.findById(id)
-                           .orElseThrow(() -> new EntityNotFoundException("Paramedic with id " + id + " not found"));
+         return paramedicDao.findById(id).orElse(null);
+                           //.orElseThrow(() -> new EntityNotFoundException("Paramedic with id " + id + " not found"));
 
     }
 

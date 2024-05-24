@@ -22,10 +22,10 @@ public class Patient implements Serializable {
 
     @Id
     @Column(name = "patientId")
-    private int patientId;
+    private Integer patientId;
 
     @Column(name = "phone")
-    private int phone;
+    private Integer phone;
 
     @Column(name = "firstName")
     private String firstName;

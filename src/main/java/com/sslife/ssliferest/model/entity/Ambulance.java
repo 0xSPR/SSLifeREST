@@ -21,10 +21,10 @@ public class Ambulance implements Serializable {
 
     @Id
     @Column(name = "ambulanceId")
-    private int ambulanceId;
+    private Integer ambulanceId;
 
     @Column(name = "capacity")
-    private int capacity;
+    private Integer capacity;
 
     @Column(name = "vehicleId")
     private String vehicleId;

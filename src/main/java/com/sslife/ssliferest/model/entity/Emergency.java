@@ -20,7 +20,7 @@ public class Emergency implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "emergencyID")
-    private int emergencyId;
+    private Integer emergencyId;
 
     @Column(name = "emergencyType")
     private String emergencyType;
